@@ -2,12 +2,14 @@
 import time
 
 from selenium import webdriver
-driver = webdriver.Chrome("chromedriver.exe")
+driver = webdriver.Chrome("Driver/chromedriver.exe")
 
 
 driver.get("https://mail.google.com/")
 time.sleep(4)
 
+
+print(input("Google Login Done ....\n"))
 driver.get("https://www.twitch.tv/")
 time.sleep(4)
 
