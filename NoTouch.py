@@ -44,7 +44,13 @@ time.sleep(1)
 pyautogui.hotkey('tab')
 pyautogui.hotkey('Enter')
 time.sleep(3)
-
+pyautogui.typewrite('aislamspondon@gmail.com', interval=0.25)
+time.sleep(1)
+pyautogui.hotkey('Enter')
+time.sleep(3)
+pyautogui.typewrite('Spondon****', interval=0.25)
+time.sleep(1)
+pyautogui.hotkey('Enter')
 
 print(input("Select Profile:"))
 
