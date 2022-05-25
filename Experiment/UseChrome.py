@@ -7,7 +7,7 @@ options.add_argument(
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 options.add_argument('--disable-blink-features=AutomationControlled')
-driver = webdriver.Chrome("Driver/chromedriver.exe", options=options)
+driver = webdriver.Chrome("../Driver/chromedriver.exe", options=options)
 stealth(driver,
         languages=["en-US", "en"],
         vendor="Google Inc.",

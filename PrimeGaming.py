@@ -53,31 +53,39 @@ driver.get("https://accounts.google.com/?hl=en-us")
 time.sleep(4)
 
 
-
 def enter_email_password(driver, username, password):
     driver.implicitly_wait(10)
     email_xpath = "//input[@type='email']"
     driver.find_element_by_xpath(email_xpath).send_keys(username)
+
     print(input("Try Manually :"))
 
-    next_button_xpath = "//span[contains(.,'Next')]/parent::button"
-    next_button = driver.find_element_by_xpath(next_button_xpath)
-    next_button.click()
+    driver.implicitly_wait(10)
     time.sleep(4)
+    next_button_xpath = "//span[contains(.,'Next')]/parent::button"
+    # next_button = driver.find_element_by_xpath(next_button_xpath)
+    # next_button.click()
+    # time.sleep(4)
+
+    print(input("Try Manually :"))
 
     driver.implicitly_wait(10)
     password_xpath = "//input[@type='password']"
     driver.find_element_by_xpath(password_xpath).send_keys(password)
     driver.find_element_by_xpath(next_button_xpath).click()
 
+    driver.implicitly_wait(10)
+    driver.get("https://mail.google.com/mail/u/0/")
 
-enter_email_password(driver, "johnalis841@gmail.com", "globe0112358")
+
+# enter_email_password(driver, "johnalis841@gmail.com", "globe0112358")
 
 
-print(input("Google Login Done ....\n"))
+print(input("Google Login Done ....:\n"))
 driver.get("https://www.twitch.tv/")
 time.sleep(4)
 
+print(input("twitch Login Done ....\n"))
 driver.get("https://www.amazon.com/your-account")
 time.sleep(4)
 
